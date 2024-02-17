@@ -20,14 +20,14 @@ type User = {
 }
 
 type MessageInfo = {
-    text: string
-    time: string
+  text: string
+  time: string
 }
 
 export type MessageType = {
-    id: number
-    user: User
-    message: MessageInfo
+  id: number
+  user: User
+  message: MessageInfo
 }
 
 // структуру объекта не менять

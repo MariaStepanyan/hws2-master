@@ -3,7 +3,8 @@
   position: relative;
   max-width: 545px;
   min-height: 77px;
-  left: 635px;
+  left: 553px;
+  margin-top: 24px;
 }
 
 .imageAndText {
@@ -21,11 +22,14 @@
   display: inline-block;
   width: 48px;
   height: 48px;
-  left: 595px;
-  top: 10px
+  right: -110px;
+  top: 10px;
+  user-select: none;
 }
 
 .text {
+  width: 600px;
+  padding: 10px;
   display: inline-block;
   font-family: Montserrat;
   font-size: 16px;
@@ -45,12 +49,16 @@
   font-weight: 600;
   line-height: 22px;
   letter-spacing: 0em;
-  text-align: left;
+  text-align: right;
   color: rgba(255, 255, 255, 1);
   margin-bottom: 10px;
 }
 
 .messageText {
+  text-wrap: wrap;
+  word-wrap: break-word;
+  /* box-shadow: 0px 1px 2px 0px rgba(29, 33, 38, 0.1),0px 5px 20px 0px rgba(29, 33, 38, 0.03);
+background: rgb(0, 102, 204); */
 }
 
 .time {
@@ -61,6 +69,6 @@
   line-height: 12px;
   letter-spacing: 0em;
   text-align: left;
-  left: 605px;
+  right: -98px;
   top: 60px;
 }
