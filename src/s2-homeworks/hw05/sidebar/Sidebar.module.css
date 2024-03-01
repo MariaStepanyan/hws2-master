@@ -5,16 +5,12 @@
 .sidebar.open {
   display: block;
   position: absolute;
-  max-width: 318px;
-  min-height: 720px;
   left: 0;
-  right: 964px;
   top: 0;
-  bottom: 0;
+  height: 100%;
+  width: 318px;
   background-color: rgb(255, 255, 255);
   z-index: 9999;
-  box-shadow: 0px 1px 2px 0px rgba(29, 33, 38, 0.1),
-    0px 10px 40px 0px rgba(29, 33, 38, 0.13);
 }
 
 .background {
@@ -52,9 +48,8 @@
 }
 .close {
   position: absolute;
-  right: 24px;
   top: 16px;
-  transform: rotate(180deg);
+  left: 269px;
 }
 
 .close img {
