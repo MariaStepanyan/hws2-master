@@ -1,5 +1,8 @@
 .buttonsContainer {
+  display: inline-block;
+  margin: auto 70px;
 }
 
 .editableSpanContainer {
+  margin: 30px 70px 24px;
 }
