@@ -22,6 +22,7 @@ test('sort name up', () => {
     })
 
     expect(newState[0]._id).toBe(1)
+    expect(newState[5]._id).toBe(0)
 })
 test('sort name down', () => {
     const newState = homeWorkReducer(initialState, {
@@ -30,6 +31,7 @@ test('sort name down', () => {
     })
 
     expect(newState[0]._id).toBe(0)
+    expect(newState[5]._id).toBe(1)
 })
 test('check age 18', () => {
     const newState = homeWorkReducer(initialState, {
