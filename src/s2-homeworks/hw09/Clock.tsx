@@ -13,7 +13,6 @@ function Clock() {
 
   const start = () => {
     stop()
-    // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
     // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
     const id: number = window.setInterval(() => {
       setDate(new Date())
@@ -23,36 +22,35 @@ function Clock() {
 
   const stop = () => {
     clearInterval(timerId)
-    // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
     setTimerId(undefined)
   }
 
   const onMouseEnter = () => {
     setShow(true)
-    // пишут студенты // показать дату если наведена мышка
   }
   const onMouseLeave = () => {
     setShow(false)
-    // пишут студенты // спрятать дату если мышка не наведена
   }
 
-  const addNumberNull = (num: number) => (num < 10 ? '0' + num : num)
+  const stringTime = new Intl.DateTimeFormat('de-DE', {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  }).format(date) || <br />
 
-  const stringTime = `${addNumberNull(date.getHours())}:${addNumberNull(
-    date.getMinutes()
-  )}:${addNumberNull(date.getSeconds())}` || <br />
-  // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты          //'date->time'
+  const stringDate = new Intl.DateTimeFormat('de-DE', {
+    month: '2-digit',
+    day: '2-digit',
+    year: 'numeric',
+  }).format(date) || <br />
 
-  const stringDate = `${addNumberNull(date.getDate())}.${addNumberNull(
-    date.getMonth()
-  )}.${date.getFullYear()}` || <br /> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем  //'date->date'
-  // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
   const stringDay = new Intl.DateTimeFormat('en-US', {
     weekday: 'long',
-  }).format(date) || <br /> // пишут студенты
+  }).format(date) || <br />
+
   const stringMonth = new Intl.DateTimeFormat('en-US', {
     month: 'long',
-  }).format(date) || <br /> // пишут студенты
+  }).format(date) || <br />
 
   return (
     <div className={s.clock}>
@@ -86,16 +84,12 @@ function Clock() {
       <div className={s.buttonsContainer}>
         <SuperButton
           id={'hw9-button-start'}
-          disabled={!!timerId} // пишут студенты // задизэйблить если таймер запущен
+          disabled={!!timerId}
           onClick={start}
         >
           start
         </SuperButton>
-        <SuperButton
-          id={'hw9-button-stop'}
-          disabled={!timerId} // пишут студенты // задизэйблить если таймер не запущен
-          onClick={stop}
-        >
+        <SuperButton id={'hw9-button-stop'} disabled={!timerId} onClick={stop}>
           stop
         </SuperButton>
       </div>
