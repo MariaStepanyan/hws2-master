@@ -1,3 +1,10 @@
 .loader {
-    /*свг и/или анимация*/
+  margin: 40px 70px;
+  /* background-image: url('./preload.gif'); */
+  /*свг и/или анимация*/
+}
+
+.loader img {
+  width: auto;
+  height: 108px;
 }
