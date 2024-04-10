@@ -11,7 +11,9 @@ type PropsType = {
 export const DoubleRange = (props: PropsType) => {
   return (
     <span id={props.id}>
-      <span></span>
+      <span>
+        <input defaultValue={props.minValue} />
+      </span>
       <MultiRangeSlider
         min={0}
         max={100}
