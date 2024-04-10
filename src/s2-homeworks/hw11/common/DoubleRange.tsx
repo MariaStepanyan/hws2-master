@@ -10,28 +10,24 @@ type PropsType = {
 
 export const DoubleRange = (props: PropsType) => {
   return (
-    <span id={props.id}>
-      <span>
-        <input defaultValue={props.minValue} />
-      </span>
-      <MultiRangeSlider
-        min={0}
-        max={100}
-        step={1}
-        canMinMaxValueSame={true}
-        minValue={props.minValue}
-        maxValue={props.maxValue}
-        onInput={(e: ChangeResult) => {
-          props.setMaxValue(e.maxValue)
-          props.setMinValue(e.minValue)
-        }}
-        label={false}
-        ruler={false}
-        style={{ border: 'none', boxShadow: 'none', width: '148px' }}
-        barRightColor='green'
-        thumbLeftColor='lime'
-        thumbRightColor='lime'
-      />
-    </span>
+    <MultiRangeSlider
+      id={props.id}
+      min={0}
+      max={100}
+      step={1}
+      canMinMaxValueSame={true}
+      minValue={props.minValue}
+      maxValue={props.maxValue}
+      onInput={(e: ChangeResult) => {
+        props.setMaxValue(e.maxValue)
+        props.setMinValue(e.minValue)
+      }}
+      label={false}
+      ruler={false}
+      style={{ border: 'none', boxShadow: 'none', width: '148px' }}
+      barRightColor='green'
+      thumbLeftColor='lime'
+      thumbRightColor='lime'
+    />
   )
 }
