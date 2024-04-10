@@ -18,8 +18,11 @@ function HW11() {
 
   const change = (event: Event, value: number | number[]): void => {
     if (Array.isArray(value)) {
-      setValue1(value[0])
-      setValue2(value[1])
+      console.log(value)
+      if (value[0] <= value[1]) {
+        setValue1(value[0])
+        setValue2(value[1])
+      }
     } else {
       value <= value2 && setValue1(value)
     }
@@ -49,12 +52,12 @@ function HW11() {
             <span id={'hw11-value-1'} className={s.number}>
               {value1}
             </span>
-            <DoubleRange
-              id={'hw11-double-slider'}
-              minValue={value1}
-              maxValue={value2}
-              setMaxValue={setValue2}
-              setMinValue={setValue1}
+            <SuperRange
+              value={[value1, value2]}
+              onChange={(e) => {
+                const value = (e.target as HTMLInputElement).value
+                change(e, [Number(value[0]), Number(value[1])])
+              }}
             />
             <span id={'hw11-value-2'} className={s.number}>
               {value2}
