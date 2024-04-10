@@ -1,6 +1,7 @@
 import MultiRangeSlider, { ChangeResult } from 'multi-range-slider-react'
 
 type PropsType = {
+  id: string
   minValue: number
   maxValue: number
   setMaxValue: (maxValue: number) => void
@@ -11,6 +12,7 @@ export const DoubleRange = (props: PropsType) => {
   return (
     <>
       <MultiRangeSlider
+        id={props.id}
         min={0}
         max={100}
         step={1}

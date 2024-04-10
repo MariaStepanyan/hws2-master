@@ -50,6 +50,7 @@ function HW11() {
               {value1}
             </span>
             <DoubleRange
+              id={'hw11-double-slider'}
               minValue={value1}
               maxValue={value2}
               setMaxValue={setValue2}
