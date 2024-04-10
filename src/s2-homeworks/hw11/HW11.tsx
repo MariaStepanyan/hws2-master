@@ -53,6 +53,7 @@ function HW11() {
               {value1}
             </span>
             <SuperRange
+              id={'hw11-double-slider'}
               value={[value1, value2]}
               onChange={(e) => {
                 const value = (e.target as HTMLInputElement).value
