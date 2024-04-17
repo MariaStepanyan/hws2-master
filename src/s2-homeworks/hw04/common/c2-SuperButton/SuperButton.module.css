@@ -1,11 +1,11 @@
 .button {
   box-sizing: border-box;
   border-radius: 3px;
-  max-width: 124px;
+  min-width: 124px;
   height: 30px;
   border: none;
   padding: 5px 24px;
-  margin-right: 12px;
+  margin-right: 24px;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
