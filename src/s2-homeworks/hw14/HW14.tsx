@@ -34,7 +34,7 @@ const HW14 = () => {
   const sendQuery = (value: string) => {
     setLoading(true)
     getTechs(value).then((res) => {
-      console.log(res)
+    //   console.log(res)
       // setTechs(['html', 'css', 'javascript', 'typescript', 'scss', 'jest'])
       setTechs((res as ResType).data.techs)
       setLoading(false)
