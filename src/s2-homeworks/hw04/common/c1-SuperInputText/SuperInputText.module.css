@@ -15,7 +15,7 @@
 }
 
 .superInput {
-  
+  margin: 24px 70px 20px;
 }
 
 .errorInput {
@@ -23,7 +23,6 @@
 }
 
 .errorInput:focus {
-  
 }
 
 .error {
