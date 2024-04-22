@@ -27,12 +27,16 @@ const HW14 = () => {
   const [searchParams, setSearchParams] = useSearchParams()
   const [techs, setTechs] = useState<string[]>([])
 
+  type ResType = {
+    data: { techs: string[] }
+  }
+
   const sendQuery = (value: string) => {
     setLoading(true)
     getTechs(value).then((res) => {
       console.log(res)
       // setTechs(['html', 'css', 'javascript', 'typescript', 'scss', 'jest'])
-      setTechs((res as any).data.techs)
+      setTechs((res as ResType).data.techs)
       setLoading(false)
       // делает студент
       // сохранить пришедшие данные
