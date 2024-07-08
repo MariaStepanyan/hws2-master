@@ -1,27 +1,65 @@
 .tech {
-    width: 50vw;
+  width: 50vw;
+  font-size: 18px;
 }
 
 .developer {
-
+  font-size: 18px;
 }
 
 .techHeader {
-    width: 50vw;
+  width: 50vw;
+  font-size: 20px;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
 }
 
 .developerHeader {
-
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 
 .row {
-    display: flex;
+  display: flex;
+  border-bottom: 1px solid gray;
+  margin-bottom: 5px;
 }
 
 .rowHeader {
-    display: flex;
+  display: flex;
+  flex-direction: row;
+  background-color: #cec9c9;
+  margin-bottom: 5px;
 }
 
 .loading {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  z-index: 5;
+}
 
+.loadingScreen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 4;
+}
+
+.spanSort {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
